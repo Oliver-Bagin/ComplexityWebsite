@@ -1,5 +1,6 @@
 import { Box, Grid } from "@mui/material";
 import { Container } from "@mui/system";
+import React from "react";
 import { reflections } from "../content/Reflections";
 import { EntryProps } from "../models/EntryProps";
 import ButtonAppBar from "./ButtonAppBar";
@@ -7,8 +8,9 @@ import Entry from "./Entry";
 
 const Body = () => {
   return (
-    <Container sx={{minWidth: 500}}>
+    <React.Fragment>
       <ButtonAppBar />
+      <Container sx={{minWidth: 500}}>
       <Box sx={{ flexGrow: 1, paddingTop: 1 }}>
         <Grid container spacing={4}>
           {reflections.map((x: EntryProps): JSX.Element => {
@@ -21,6 +23,7 @@ const Body = () => {
         </Grid>
       </Box>
     </Container>
+    </React.Fragment>
   );
 };
 
