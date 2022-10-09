@@ -134,4 +134,9 @@ export let reflections: Array<EntryProps> = [
       },
     ],
   },
+  {
+    title: "Facilitations reflection",
+    week: "End Of Facilitations",
+    body: "OUTRO",
+  },
 ];
