@@ -23,7 +23,7 @@ jobs:
       working-directory: website
     - name: Create production build
       # CI="" disables warnings as errors
-      run: CI="" yarn build
+      run: CI="" yarn run build
       working-directory: website
     - name: Deploy to gh-pages branch
       uses: peaceiris/actions-gh-pages@v3

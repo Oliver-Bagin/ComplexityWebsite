@@ -21,7 +21,7 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Reflections for VCUG2001
+            Reflections for VCUG2001.
           </Typography>
         </Toolbar>
       </AppBar>
