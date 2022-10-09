@@ -19,12 +19,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Sync node modules
-      run: npm ci
+      run: yarn install
       working-directory: website
     - name: Create production build
       # CI="" disables warnings as errors
       run: CI="" yarn build
-      working-directory: dashboard
+      working-directory: website
     - name: Deploy to gh-pages branch
       uses: peaceiris/actions-gh-pages@v3
       with:
