@@ -1,0 +1,35 @@
+name: Dashboard Development Netlify
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+    - 'website/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.14.2]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'yarn'
+        cache-dependency-path: website/yarn.json
+    - name: Sync node modules
+      run: npm ci
+      working-directory: website
+    - name: Create production build
+      # CI="" disables warnings as errors
+      run: CI="" yarn build
+      working-directory: dashboard
+    - name: Deploy to gh-pages branch
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./website/build
+        publish_branch: BUILD-website
