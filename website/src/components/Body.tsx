@@ -10,7 +10,7 @@ const Body = () => {
     <Container sx={{minWidth: 500}}>
       <ButtonAppBar />
       <Box sx={{ flexGrow: 1, paddingTop: 1 }}>
-        <Grid container spacing={2}>
+        <Grid container spacing={4}>
           {reflections.map((x: EntryProps): JSX.Element => {
             return (
               <Grid item xs={16}>
