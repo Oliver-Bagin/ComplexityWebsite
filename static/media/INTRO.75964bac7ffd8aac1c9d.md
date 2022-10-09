@@ -1,0 +1,3 @@
+The following questions were considered within the context of my final artifact. I tried to considered what the tutorials meant for the real world. I tried to think about their applications in business, y own personal development and in decision making. I think these reflections have helped me be well poised to tackle my final artifact. This is all to say that the goal of my reflections was to take the class material and consider its real-world use. 
+
+Using Kolb’s model, I can consider the workshops to be 'concrete learning' and thus want these refection’s to constitute my ‘elective observation’ and ‘abstract conceptualization’ phases. This means that my final artifact can be the ‘active experimentation’ phase. 
